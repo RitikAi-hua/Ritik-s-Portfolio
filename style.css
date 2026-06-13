@@ -60,7 +60,9 @@ nav{
     /* background-color: rgb(23, 23, 88); */
      background-color: var(--nav-color);
     padding:10px 50px;
-    position: fixed;
+   position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 nav ul{
@@ -139,7 +141,9 @@ nav ul li a:hover{
 }
 
 .rightSection{
-    margin:0px 0;
+    max-width:100%;
+    height:auto;
+    /* margin:0px 0; */
 }
 
 .buttons{
@@ -375,4 +379,84 @@ footer{
     padding:30px;
     background:#0f1350;
     margin-top:50px;
+}
+@media (max-width: 768px) {
+
+    nav{
+        flex-direction: column;
+        height: auto;
+        padding: 15px;
+        gap:15px;
+        position: relative;
+    }
+
+    nav ul{
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .first{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .leftSection{
+        width: 100%;
+        font-size: 2rem;
+    }
+
+    .rightSection{
+        width: 100%;
+        margin-top: 20px;
+    }
+    nav ul li{
+        margin:5px 0;
+    }
+    .rightSection img{
+        width: 80%;
+    }
+}
+/* img{
+    max-width: 100%;
+    height: auto;
+} */
+
+@media (max-width:768px){
+
+    .first{
+        flex-direction: column-reverse;
+        padding: 40px 20px;
+    }
+
+    .leftSection,
+    .rightSection{
+        width: 100%;
+        text-align: center;
+    }
+
+    .first h1{
+        font-size: 2rem;
+    }
+
+}
+@media (max-width:768px){
+
+    .buttons{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn1,
+    .btn2{
+        width: 220px;
+    }
+    form{
+    width:95%;
+}
+
+}
+form{
+    width:80%;
+    max-width:600px;
 }
