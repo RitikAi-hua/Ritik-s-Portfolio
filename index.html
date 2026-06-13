@@ -16,6 +16,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 </head>
 
 <body>
+    <div id="particles-js"></div>
     <header>
         <nav class="upper">
             <div class="left">
@@ -241,7 +242,8 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
      
 </footer>
     <script src="https://unpkg.com/typed.js@3.0.0/dist/typed.umd.js"></script>
-   
+      <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
 
   <!-- Setup and start animation! -->
   <script>
@@ -272,7 +274,31 @@ toggleBtn.addEventListener("click", () => {
         localStorage.setItem("theme", "dark");
         toggleBtn.textContent = "🌙";
     }
+}); 
+particlesJS("particles-js", {
+  particles: {
+    number: {
+      value: 100
+    },
+    color: {
+      value: "#ffffff"
+    },
+    shape: {
+      type: "circle"
+    },
+    opacity: {
+      value: 0.5
+    },
+    size: {
+      value: 3
+    },
+    move: {
+      enable: true,
+      speed: 2
+    }
+  }
 });
+
   </script>
 </body>
 
